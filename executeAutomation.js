@@ -14,7 +14,7 @@ if (tableBody) {
         var docName = (row.children[2]).innerText;
         
         // console.log(docName);
-        var policyNum = extractPolicyNumber(docName)
+        var policyNum = (docName.split(" ")[0]).trim();
         row.children[3].innerText = policyNum;
         row.children[4].innerHTML = '<span class="k-dirty"></span>Notices and Statements';
         row.children[5].innerHTML = '<span class="k-dirty"></span>Statement';
